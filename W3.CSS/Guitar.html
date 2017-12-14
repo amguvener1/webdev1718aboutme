@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: lightblue
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: tomato;
+    border:3px solid white;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: courier;
+    font-size: 120%;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: lightblue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+body {
+    background-color: lightblue
+}
+
+h1 {
+    color: lightblue;
+    font-family: Arial;
+    font-size: 200%;
+    text-align: center;
+    background-color: tomato;
+    padding:10px;
+}
+    
+h2 {
+    color: tomato;
+    font-family: courier;
+    font-size: 170%;
+    border: 3px solid tomato;
+    text-align: center;
+}
+
+ h3 {
+	color: tomato;
+    font-family: Courier;
+    font-size: 145%
+}
+
+
+</style>
+</head>
+<body>
+<ul>
+  <h1>About Me</h1>
+  <li><a href="aboutme.html">About Me</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">More Info</a>
+    <div class="dropdown-content">
+    <a href="Soccer.html">Soccer</a>
+    <a href="Guitar.html">Guitar</a>
+    </div>
+  </li>
+</ul>
+<h2 style="border:3px solid tomato;text-align:center;color:tomato;">My Interests/Hobbies</h2>
+<h3><u>Playing The Guitar:</u></h3>
+<p>
+My other hobby consists of playing an instrument called the guitar. Here's a little more information on what the guitar is and how to play it.
+</p>
+<p>The guitar is a fretted instrument that usually consists of six strings. Each of the strings vary in thickness, which creates different pitches.
+You would play the guitar by strumming or plucking the strings with either your fingers or a pick. The way that the sound is projected through the guitar is by the soundhole
+if it is an acoustic guitar or a guitar amp if it is an electric guitar. A guitar could also have steel or nylon strings, both have a different sound to them.
+</p>
+<p>
+There are also three main types of modern acoustic guitars: the classical guitar, which has nylon strings, steel-string guitar, and archtop guitar, also called jazz guitar.
+There are also different types of electric guitars: hollowbody guitars, archtop guitars, and solid-body guitars.
+</p>
+<hr>
+<h3 style="font-size:120%;">Parts of the Guitar:</h3>
+<img style="border:2px solid tomato;width 140px;" src="http://www.stepbystep.com/wp-content/uploads/2012/02/G3.jpg" alt="Parts of Guitar" align="middle">
+<hr>
+
+<p style="color:tomato"> For More Information on Guitars Visit these Websites:</p>
+<p><a href="http://www.guyguitars.com/eng/handbook/BriefHistory.html">History of the Guitar</a></p>
+<p><a href="https://www.guitarlessonworld.com/lessons/parts-guitar-learn-guitars-anatomy/">Guitar Anatomy</a></p>
+<p><a href="http://www.guitarhistoryfacts.com/guitar-making/how-guitars-are-made/">How Guitars are Made</a></p>
+<p><a href="https://www.chordbuddy.com/guitar-learning-system-for-everyone/how-to-play-the-guitar-for-beginners/guitar-tuning/">Tuning a Guitar</a></p>
+<p><a href="https://www.guitarlessons.com/guitar-lessons/beginner-guitar-quick-start-series/the-guitar-string-names">Guitar String Names</a></p>
+<hr>
+<h3>Questionnaire</h3>
+<form action="action_page.php">
+1. Did you learn anything new?<br>
+  <input type="radio" name="answer" value="yes"> Yes<br>
+  <input type="radio" name="answer" value="no"> No<br>  
+</form> 
+<form>
+2. Would you consider doing this as a hobby?<br>
+  <input type="radio" name="answer" value="yes"> Yes<br>
+  <input type="radio" name="answer" value="no"> No<br>  
+  <input type="submit" value="Submit">
+</form> 
+

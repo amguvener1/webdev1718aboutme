@@ -1,0 +1,55 @@
+<DOCTYPE data-cloud9-id='5' html>
+
+    <html data-cloud9-id='1'>
+    
+    <head data-cloud9-id='2'>
+        <script data-cloud9-id='6' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+        </script>
+                <script data-cloud9-id='7'>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    //console.log("clicked");
+                    $.ajax({
+                        url: "https://data.cityofchicago.org/resource/psqp-6rmg.json",
+                        success: function(result) {
+                            console.log(result);
+                            var output = "";
+                            
+                            $.each(result, function(index, value){
+                                //console.log(index + " " + value);
+                                
+                                // output += "<div class='output'>" + value.building_street + " " + value.original_lse_report_approved + "</div>";
+                                
+                                $("#results").append(value.name_ + " " + value.address+ " " + value.hours_of_operation+ "  </div>"); 
+                            
+                            });
+                            //$("#results").html(output);
+                        }
+                    })
+                });
+            });
+        </script>
+       
+        
+        <style data-cloud9-id='8'>
+            .output{
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body data-cloud9-id='3'>
+
+        <div data-cloud9-id='9' id="div1">
+            <h2 data-cloud9-id='10'>Library Locations</h2>
+        </div>
+
+        <button data-cloud9-id='11'>Get Locations</button>
+        
+        <div data-cloud9-id='12' id="results">
+            
+        </div>
+    </body>
+
+    </html>
+<script src="/_static/preview/livecss.js"></script>

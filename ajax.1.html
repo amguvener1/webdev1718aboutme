@@ -1,0 +1,64 @@
+<DOCTYPE data-cloud9-id='5' html>
+
+    <html data-cloud9-id='1'>
+    
+    <head data-cloud9-id='2'>
+        <script data-cloud9-id='6' src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+        </script>
+                <script data-cloud9-id='7'>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    //console.log("clicked");
+                    $.ajax({
+                        url: "https://data.cityofchicago.org/resource/psqp-6rmg.json",
+                        success: function(result) {
+                            console.log(result);
+                            var output = "";
+                            
+                            $.each(result, function(index, value){
+                                //console.log(index + " " + value);
+                                
+                                // output += "<div class='output'>" + value.building_street + " " + value.original_lse_report_approved + "</div>";
+                                
+                                $("#results").append(value.name_ + "  " + Address: value.address+ " " + value.hours_of_operation+ "  " + value.city+ "  " + value.state+ " " + value.zip+ " </div>");
+                            
+                            });
+                            //$("#results").html(output);
+                        }
+                    })
+                });
+            });
+        </script>
+       
+        
+        <style data-cloud9-id='8'>
+            .output{
+                color: red;
+            }
+           
+            p, h1 {font-family: Courier;}
+            p {font-size:1.5em;line-height:1.5em; margin-left: 24px;}
+            pre {font-size: 2em;}
+            div { border: 2px solid lightgrey; margin: 4px; border-radius: 5px; background-color: grey}
+            p {color:white;}
+            h1 {color:lightblue; text-align: center;}
+            body {background-color: black ;
+        
+        </style>
+    </head>
+
+    <body data-cloud9-id='3'>
+
+        <div data-cloud9-id='9' id="div1">
+            <h2 data-cloud9-id='10'>jQuery and APIs</h2>
+        </div>
+
+        <button data-cloud9-id='11'>Events</button>
+        
+        <div data-cloud9-id='12' id="results">
+            
+        </div>
+    </body>
+
+    </html>
+<script src="/_static/preview/livecss.js"></script>

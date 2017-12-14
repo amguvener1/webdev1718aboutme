@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ </head>
+<style>
+
+body {
+    background-color: lightblue
+}
+
+h1 {
+    color: lightblue;
+    font-family: Arial;
+    font-size: 200%;
+    text-align: center;
+    background-color: tomato;
+    padding:10px;
+}
+    
+h2 {
+    color: tomato;
+    font-family: courier;
+    font-size: 170%;
+    border: 3px solid tomato;
+    text-align: center;
+}
+
+ h3 {
+	color: tomato;
+    font-family: Courier;
+    font-size: 145%
+}
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+});
+</script>
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown(5000);
+    });
+    
+});
+</script>
+
+
+
+</head>
+<body>
+<h1>About Me</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="aboutme.html">About Me</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="aboutme.html">Home</a></li>
+      <li><a href="Soccer.html">Soccer</a></li>
+      <li><a href="Guitar.html">Playing Guitar</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h2 style="border:3px solid tomato;text-align:center;color:tomato;">My Interests/Hobbies</h2>
+<h3><u>Playing The Guitar:</u></h3>
+<p class="text-danger">
+My other hobby consists of playing an instrument called the guitar. Here's a little more information on what the guitar is and how to play it.
+</p>
+<p class="text-danger">The guitar is a fretted instrument that usually consists of six strings. Each of the strings vary in thickness, which creates different pitches.
+You would play the guitar by strumming or plucking the strings with either your fingers or a pick. The way that the sound is projected through the guitar is by the soundhole
+if it is an acoustic guitar or a guitar amp if it is an electric guitar. A guitar could also have steel or nylon strings, both have a different sound to them.
+</p>
+<p class="text-danger">
+There are also three main types of modern acoustic guitars: the classical guitar, which has nylon strings, steel-string guitar, and archtop guitar, also called jazz guitar.
+There are also different types of electric guitars: hollowbody guitars, archtop guitars, and solid-body guitars.
+</p>
+<hr>
+<h3 style="font-size:120%;">Parts of the Guitar:</h3>
+<img style="border:2px solid tomato;width 140px;" src="http://www.stepbystep.com/wp-content/uploads/2012/02/G3.jpg" alt="Parts of Guitar" align="middle">
+
+
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Guitar Diagram</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button id="flip" type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-danger">Diagram of the Guitar</h4>
+        </div>
+        <div class="modal-body">
+          <p id="panel" class="text-info">The diagram above is a visual of the different parts of the guitar.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<hr>
+
+<p style="color:tomato"> For More Information on Guitars Visit these Websites:</p>
+<p><a href="http://www.guyguitars.com/eng/handbook/BriefHistory.html">History of the Guitar</a></p>
+<p><a href="https://www.guitarlessonworld.com/lessons/parts-guitar-learn-guitars-anatomy/">Guitar Anatomy</a></p>
+<p><a href="http://www.guitarhistoryfacts.com/guitar-making/how-guitars-are-made/">How Guitars are Made</a></p>
+<p><a href="https://www.chordbuddy.com/guitar-learning-system-for-everyone/how-to-play-the-guitar-for-beginners/guitar-tuning/">Tuning a Guitar</a></p>
+<p><a href="https://www.guitarlessons.com/guitar-lessons/beginner-guitar-quick-start-series/the-guitar-string-names">Guitar String Names</a></p>
+<hr>
+<h3>Questionnaire</h3>
+<form action="action_page.php">
+1. Did you learn anything new?<br>
+  <input type="radio" name="answer" value="yes"> Yes<br>
+  <input type="radio" name="answer" value="no"> No<br>  
+</form> 
+<form>
+2. Would you consider doing this as a hobby?<br>
+  <input type="radio" name="answer" value="yes"> Yes<br>
+  <input type="radio" name="answer" value="no"> No<br>  
+  <input type="submit" value="Submit">
+</form> 
+
