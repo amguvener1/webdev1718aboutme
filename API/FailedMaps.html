@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Library Locations</title>
+    <style>
+    h1 {font-family:Courier; text-align:center; color:lightblue;}
+    body {background-color: black;}
+    p {font-family: Arial; text-align:center; color:lightgrey;}
+    div { border: 2px solid lightgrey; margin: 4px; border-radius: 5px; background-color: grey}
+    
+    #map {
+        height: 700px;
+        width: 100%;
+
+       }
+    </style>
+</head>
+<body>
+    <h1>Library Locations Map</h1>
+    <p>This map displays the different locations of public libraries in Chicago.</p>
+    
+     <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</body>
+
+
+
+
+</html>
