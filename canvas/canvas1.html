@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:7px solid red;"></canvas>
+    
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var grd = ctx.createLinearGradient(0, 0, 800, 0);
+grd.addColorStop(0, "teal");
+grd.addColorStop(1, "darkblue");
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 400, 400);
+
+//lines
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(70,20);
+ctx.lineTo(20,350);
+ctx.stroke();
+ctx.strokeStyle = "white";
+ctx.lineWidth = 5;
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(70,20);
+ctx.lineTo(150,350);
+ctx.stroke();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(40,220);
+ctx.lineTo(120,220);
+ctx.stroke();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(372.5,220);
+ctx.lineTo(270,220);
+ctx.stroke();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(350,20);
+ctx.lineTo(197,20);
+ctx.stroke();
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(200,350);
+ctx.lineTo(200,20);
+ctx.stroke();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(372.5,350);
+ctx.lineTo(197,350);
+ctx.stroke();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(370,350);
+ctx.lineTo(370,220);
+ctx.stroke();
+
+//circles
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(70,25,10,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red"
+ctx.fill();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(20,350,10,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red"
+ctx.fill();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(150,350,10,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red"
+ctx.fill();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(340,22,10,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red"
+ctx.fill();
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(280,220,10,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "red"
+ctx.fill();
+
+
+//rectangles
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillRect(65, 210, 20, 20);
+ctx.stroke();
+ctx.strokeStyle = "white";
+ctx.strokeRect(65, 210, 20, 20);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillRect(190, 50, 20, 270);
+ctx.stroke();
+ctx.strokeStyle = "white";
+ctx.strokeRect(190, 50, 20, 270);
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillRect(310, 210, 35, 20);
+ctx.stroke();
+ctx.strokeStyle = "white";
+ctx.strokeRect(310, 210, 35, 20);
+
+
+
+
+
+</script> 
+
+    
+</body>
+    
+</html>
