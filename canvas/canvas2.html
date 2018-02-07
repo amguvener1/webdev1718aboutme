@@ -1,57 +1,40 @@
 <!DOCTYPE html>
 <html>
+    <style>
+    canvas {
+        border : 7px solid blue;
+        background-color : black;
+    }
+    </style>
+    <body>
+<div id="container">   
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+</div>
 
-<body>
-<canvas id="myCanvas" width="600" height="400" style="border:6px solid black; 
-background-color:lightblue;" >
-</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
  
-<script type="text/javascript">
-   var canvas;
-   var ctx;
-   var x = 600;
-   var y = 400;
-   var mx = 1.5;
-   var my = 4;
-   var WIDTH = 600; 
-   var HEIGHT = 400;
- 
-function circle(x,y,r) {
   ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI*2, true);
-  ctx.fillStyle = "orange";
+  ctx.moveTo(500,400);
+  ctx.lineTo(300,400);
+  ctx.stroke();
+
+function drawCircle(x){
+  ctx.beginPath();
+  ctx.arc(x,200,35,0,2*Math.PI);
+  ctx.fillStyle="blue";
   ctx.fill();
 }
- 
-function clear() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-}
- 
-function init() {
-  canvas = document.getElementById("myCanvas");
-  ctx = canvas.getContext("2d");
-  return setInterval(draw, 10);
-}
- 
-function draw() {
-  clear();
-  circle(x, y, 50);
- 
-  if (x + mx > WIDTH || x + mx < 0)
-    mx = -mx;
-  if (y + my > HEIGHT || y + my < 0)
-    my = -my;
- 
-  x += mx;
-  y += my;
- 
-}
- 
-init();
+var x = 0;
+setInterval(function(){ 
+  ctx.clearRect(0,0,400,400);
+  drawCircle(x%400);
+  x++;
+}, 8);
+</script> 
 
- 
-</script>
-                
 
-  </body>
+    
+    </body>
 </html>
