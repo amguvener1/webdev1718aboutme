@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    canvas {
+        border : 7px solid blue;
+        background-color : black;
+    }
+    </style>
+    <body>
+<div id="container">   
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+</div>
+
+<script>
+var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+ 
+  ctx.beginPath();
+  ctx.moveTo(400,500);
+  ctx.lineTo(400,500);
+  ctx.stroke();
+  
+  var cr = 'rgb('+
+      Math.floor(Math.random()*256)+','+
+      Math.floor(Math.random()*256)+','+
+      Math.floor(Math.random()*256)+')';
+
+  
+ function drawCircle(y){
+  ctx.beginPath();
+  ctx.arc(200,y,70,0,2*Math.PI);
+  ctx.fillStyle= cr;
+  ctx.fill();
+  ctx.closePath();
+}
+var y = 0;
+setInterval(function(){ 
+  ctx.clearRect(0,0,400,400);
+  drawCircle(y%500);
+  y++;
+}, 8);
+
+
+
+</script> 
+
+
+    
+    </body>
+</html>
