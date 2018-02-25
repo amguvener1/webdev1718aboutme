@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <title>Brick Breaker Game</title>
+  <style>
+        canvas {
+            padding: 0;
+            margin: "0 auto";
+            background: #eee;
+            display: "block";
+        }
+    </style>
 
 <body>
-<canvas id="myCanvas" width="400" height="400" style="border:6px solid black; 
-background-color:lightblue;" >
+<canvas id="myCanvas" width="480" height="320">
 </canvas>
  
 <script type="text/javascript">
    var canvas;
    var ctx;
-   var x = 400;
-   var y = 400;
-   var mx = 1.5;
-   var my = 4;
-   var WIDTH = 400; 
-   var HEIGHT = 400;
+   var x = 480;
+   var y = 320;
+   var mx = 2;
+   var my = -2;
+   var WIDTH = 480; 
+   var HEIGHT = 320;
  
 function circle(x,y,r) {
   ctx.beginPath();
   ctx.arc(x, y, r, 0, Math.PI*2, true);
-  ctx.fillStyle = "orange";
+  ctx.fillStyle = "navy";
   ctx.fill();
 }
  
@@ -35,7 +43,7 @@ function init() {
  
 function draw() {
   clear();
-  circle(x, y, 30);
+  circle(x, y, 10);
  
   if (x + mx > WIDTH || x + mx < 0)
     mx = -mx;
