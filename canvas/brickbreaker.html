@@ -5,7 +5,7 @@
     <title>Brick Breaker Game</title>
     <style>
     	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+    	canvas { background-image: url("https://cdn.allwallpaper.in/wallpapers/480x320/16619/futuristic-ufo-artwork-city-skyline-cities-480x320-wallpaper.jpg"); display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -42,6 +42,7 @@ for(c=0; c<brickColumnCount; c++) {
         bricks[c][r] = { x: 0, y: 0, status: 1 };
     }
 }
+
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -91,14 +92,14 @@ function collisionDetection() {
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "navy";
+    ctx.fillStyle = "orange";
     ctx.fill();
     ctx.closePath();
 }
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "red";
+    ctx.fillStyle = "orange";
     ctx.fill();
     ctx.closePath();
 }
@@ -112,7 +113,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillStyle = "red";
+                ctx.fillStyle = "orange";
                 ctx.fill();
                 ctx.closePath();
             }
@@ -120,13 +121,13 @@ function drawBricks() {
     }
 }
 function drawScore() {
-    ctx.font = "17px Arial";
-    ctx.fillStyle = "black";
+    ctx.font = "17px Commons";
+    ctx.fillStyle = "orange";
     ctx.fillText("Score: "+score, 8, 20);
 }
 function drawLives() {
-    ctx.font = "17px Arial";
-    ctx.fillStyle = "black";
+    ctx.font = "17px Commons";
+    ctx.fillStyle = "orange";
     ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }
 
