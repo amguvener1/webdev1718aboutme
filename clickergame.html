@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <style>
+       
+    	canvas { background-image: url("https://img1.coastalliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2017/04/main/coral-reef-fish-underwater-153971297.jpg?itok=Fo69B0xj"); 
+    	display: block; margin: auto; border:5px solid rgb(255, 131, 39);}   
+    </style>
+<body>
+  <canvas onclick="myFunction(event)" id="myCanvas" width="480" height="620"></canvas>  
+  
+<script>
+    
+    
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var score=0;
+            var lives=3;
+            var randx=Math.random()*450;
+            var randy=Math.random()*450;
+            ctx.textAlign="center";
+            ctx.font="30px Courier New";
+            ctx.fillStyle = "rgb(255, 131, 39)";
+             ctx.clearRect(0, 0, 480, 620);
+            ctx.fillText("SCORE: "+score, 400, 30);
+            ctx.fillText("LIVES: "+lives, 80, 30);
+            var img = new Image();
+        Image.onload = function () {
+	Ready = true;
+};
+           img.src = "https://www.shareicon.net/download/2016/08/19/817563_animal_512x512.png";
+          ctx.drawImage(img, randx, randy, 70, 85);
+           
+            
+            function myFunction(event){
+                var xpos=event.clientX;
+                var ypos=event.clientY;
+                if (xpos>=randx && xpos<=randx+450 && ypos>=randy && ypos<=randy+450){
+                    ctx.clearRect(0, 0, 480, 620);
+                    score++;
+                    ctx.fillStyle = "rgb(255, 131, 39)";
+                    ctx.fillText("SCORE: "+score, 400, 30);
+                    ctx.fillText("LIVES: "+lives, 80, 30);
+                    randx=Math.random()*450;
+                    randy=Math.random()*450;
+                    ctx.drawImage(img, randx, randy, 70, 85);
+                
+}else {
+                    ctx.clearRect(0, 0, 480, 620);
+                    lives--;
+                    ctx.fillStyle = "rgb(255, 131, 39)";
+                    ctx.fillText("SCORE: "+score, 400, 30);
+                    ctx.fillText("LIVES: "+lives, 80, 30);
+                    randx=Math.random()*450;
+                    randy=Math.random()*450;
+                    ctx.drawImage(img, randx, randy, 70, 85);
+                    
+                    if (lives==0){
+                        alert("GAME OVER");
+                        
+                        location.reload();
+                    }
+                }
+                if (score==10){
+                    alert("You Won!");
+                    location.reload();
+                }
+            }
+            
+        
+    
+</script>
+    
+</body>
+    
+    
+</html>

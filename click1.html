@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<style>
+  
+#game{
+	background:#004466;
+    margin: auto;
+	border:5px solid rgb(255, 131, 39);
+	padding: auto;
+	display: block;
+}
+</style>
+
+<body>
+
+<canvas id="game" width="480" height="620"></canvas>
+
+	<script type="text/javascript" src="game.js"></script>
+	<script>
+	var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+
+context.font = "50px Impact";
+context.fillStyle = "rgb(255, 131, 39)";
+context.textAlign = "center";
+context.fillText("Clicker Fish", canvas.width/2, canvas.height/2);
+
+context.font = "20px Arial";
+context.fillText("Press Enter To Start", canvas.width/2, canvas.height/2 + 50);
+
+
+</script>	
+
+
+</body>
+</html>
